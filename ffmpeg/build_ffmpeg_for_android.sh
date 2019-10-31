@@ -1,9 +1,10 @@
 #!/bin/bash
 set -e
+set -x
 
 PREFIX_DIR=$PWD/ffmpeg-android-sdk
 SYSROOT=$NDK_HOME/platforms/android-19/arch-arm/
-CROSS_COMPILE=$NDK_HOME/toolchains/arm-linux-androideabi-4.9/prebuilt/windows/bin/arm-linux-androideabi-
+CROSS_COMPILE=$NDK_HOME/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-
 EXTRA_CFLAGS="-I$PREFIX_DIR/include -DANDROID -DNDEBUG -Os -ffast-math -mfpu=neon-vfpv4 -mfloat-abi=softfp"
 EXTRA_LDFLAGS="-L$PREFIX_DIR/lib"
 
@@ -58,7 +59,7 @@ cd -
 
 #++ build ffmpeg ++#
 if [ ! -d ffmpeg ]; then
-  git clone -b fanplayer https://github.com/rockcarry/ffmpeg
+  git clone -b fanplayer-n3.3.x https://github.com/rockcarry/ffmpeg
 fi
 cd ffmpeg
 ./configure \

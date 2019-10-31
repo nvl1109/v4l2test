@@ -1,11 +1,11 @@
-prefix=/home/chenk/ffmpeg-android-sdk
+prefix=/proj/p/nick_upwork/code/v4l2test/ffmpeg/ffmpeg-android-sdk
 exec_prefix=${prefix}
 libdir=${prefix}/lib
 includedir=${prefix}/include
 
 Name: libavutil
 Description: FFmpeg utility library
-Version: 55.34.101
+Version: 55.58.100
 Requires: 
 Requires.private: 
 Conflicts:

@@ -30,7 +30,7 @@ static void* micdev_capture_thread_proc(void *param)
 
     while (!(mic->thread_state & MICDEV_TS_EXIT)) {
         // read data from pcm
-#if 0
+#if 1
         ret = pcm_read(mic->pcm, mic->buffer, mic->buflen);
 #else
         ret = pcm_read_ex(mic->pcm, mic->buffer, mic->buflen);
